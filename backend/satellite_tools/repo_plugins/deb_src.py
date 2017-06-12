@@ -121,7 +121,7 @@ class DebRepo(object):
                     package['epoch'] = ''
                     version = pair[1]
                     if version.find(':') != -1:
-                        package['epoch'], version = version.split(':')
+                        package['epoch'], version = version.split(':', 1)
                     if version.find('-') != -1:
                         tmp = version.split('-')
                         package['version'] = '-'.join(tmp[:-1])

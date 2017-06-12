@@ -189,7 +189,7 @@ def parseDEBName(pkgName):
     e = None
     n, version = pkgName.split('_')
     if version.find(':') != -1:
-        e, version = version.split(':')
+        e, version = version.split(':', 1)
     version_tmpArr = version.split('-')
     v = '-'.join(version_tmpArr[:-1])
     r = version_tmpArr[-1]
